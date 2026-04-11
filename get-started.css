@@ -1,0 +1,87 @@
+:root {
+    --primary: #EB332B;
+    --dark: #0d0d0d;
+    --light: #ffffff;
+    --text: #1a1a1a;
+    --bg: #f8f9fa;
+}
+
+[data-theme="dark"] {
+    --bg: #0d0d0d;
+    --light: #161616;
+    --text: #bbbbbb;
+}
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background: var(--bg); 
+    color: var(--text); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    padding: 20px; 
+    transition: background 0.3s;
+}
+
+.booking-controls { position: absolute; top: 30px; right: 30px; }
+.theme-switch-wrapper { background: rgba(0,0,0,0.1); border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; overflow: hidden; }
+.mode-icon { display: flex; flex-direction: column; transition: 0.4s; height: 90px; align-items: center; justify-content: space-around; color: var(--text); }
+[data-theme="dark"] .mode-icon { transform: translateY(-45px); }
+
+.booking-container { 
+    background: var(--light); 
+    width: 100%; 
+    max-width: 1000px; 
+    display: flex; 
+    border-radius: 30px; 
+    overflow: hidden; 
+    box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+}
+
+.booking-sidebar { 
+    background: var(--primary); 
+    color: white; 
+    padding: 60px 40px; 
+    flex: 1; 
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-btn { color: white; text-decoration: none; font-weight: 600; margin-bottom: 50px; display: block; font-size: 0.9rem; }
+.sidebar-content h2 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
+.trust-icons { margin-top: auto; display: flex; flex-direction: column; gap: 15px; font-size: 0.85rem; opacity: 0.9; padding-top: 40px;}
+
+.booking-form-area { padding: 60px 50px; flex: 1.6; min-width: 320px; }
+.input-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+.field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 25px; }
+.field label { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; color: var(--text); opacity: 0.6; letter-spacing: 1px; }
+.field input, .field select, .field textarea { 
+    padding: 15px; 
+    border: 1px solid rgba(0,0,0,0.1); 
+    border-radius: 12px; 
+    background: transparent; 
+    color: var(--text); 
+    font-family: inherit;
+}
+
+[data-theme="dark"] .field input, [data-theme="dark"] .field select, [data-theme="dark"] .field textarea { border-color: #333; }
+
+.submit-btn { 
+    width: 100%; 
+    padding: 20px; 
+    background: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 15px; 
+    font-weight: 800; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .booking-sidebar, .booking-form-area { padding: 40px 30px; }
+    .sidebar-content h2 { font-size: 2rem; }
+}

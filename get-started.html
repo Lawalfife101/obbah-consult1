@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./Untitled design.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begin Your Journey | Obbah Consult</title>
+    <link rel="stylesheet" href="get-started.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+    <div class="booking-controls">
+        <button id="theme-toggle" class="theme-switch-wrapper">
+            <div class="mode-icon">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </div>
+        </button>
+    </div>
+    <div class="booking-container glass">
+        <div class="booking-sidebar">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
+            <div class="sidebar-content">
+                <h2>Your Global <br>Journey Starts Here.</h2>
+                <p>Fill in your details and our expert consultants will get back to you within 24 hours.</p>
+                <div class="sidebar-footer">
+                    <span><i class="fas fa-check-circle"></i> Certified Experts</span>
+                    <span><i class="fas fa-check-circle"></i> 98% Visa Success</span>
+                </div>
+            </div>
+        </div>
+        <div class="booking-form-area">
+            <form id="consult-form" action="https://formspree.io/f/movabdgb" method="POST">
+                <div class="input-grid">
+                    <div class="field">
+                        <label>Full Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="field">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="field">
+                        <label>Study Destination</label>
+                        <select name="country" required>
+                            <option value="">Choose Country...</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="USA">USA</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Preferred Date</label>
+                        <input type="date" id="preferred-date" name="date" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Academic Goals</label>
+                    <textarea name="message" rows="3" placeholder="Tell us about your plans..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Schedule Consultation</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
